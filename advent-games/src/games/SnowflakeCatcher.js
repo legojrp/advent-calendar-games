@@ -29,13 +29,15 @@ const SnowflakeCatcher = () => {
   const checkCollisions = () => {
     const basketLeft = basketX;
     const basketRight = basketX + basketWidth;
+    const basketBottom = window.innerHeight - 50; // Basket bottom is 50px above the bottom of the screen
 
     let caughtCount = 0;
 
     const remainingSnowflakes = snowflakes.filter((snowflake) => {
       // Check if snowflake is at basket level and within the basket's left-right bounds
       if (
-        snowflake.y + snowflakeSize >= window.innerHeight - 50 && // It's at the basket level
+        snowflake.y + snowflakeSize >= basketBottom && // Snowflake reaches the basket level
+        snowflake.y + snowflakeSize <= basketBottom + snowflakeSpeed && // Just below the basket
         snowflake.x >= basketLeft && // Snowflake is inside the basket's left boundary
         snowflake.x <= basketRight // Snowflake is inside the basket's right boundary
       ) {
@@ -182,4 +184,4 @@ const SnowflakeCatcher = () => {
   );
 };
 
-export default SnowflakeCatcher;  
+export default SnowflakeCatcher;
