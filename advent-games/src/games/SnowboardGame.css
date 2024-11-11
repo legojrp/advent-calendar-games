@@ -1,0 +1,107 @@
+/* SnowboardGame.css */
+
+/* Full-screen layout */
+.game-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    padding: 20px;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-image: url('https://example.com/snowy-background.jpg'); /* Change to real snowboarding background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay for better text contrast */
+    z-index: -1;
+  }
+  
+  .score-board {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+  
+  .snowboarder {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    background-color: #b0e0e6;
+    border-radius: 15px;
+    transition: transform 1s ease;
+    margin-top: 50px;
+    z-index: 1;
+  }
+  
+  .snowboard {
+    width: 100%;
+    height: 20px;
+    background-color: #8b4513;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+  }
+  
+  .snowboarder.jumping {
+    animation: jump 1s forwards;
+  }
+  
+  .snowboard.in-air {
+    animation: spin 1s forwards;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-80px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .reset-button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .reset-button:hover {
+    background-color: #e53e2f;
+  }
+  
