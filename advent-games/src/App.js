@@ -1,10 +1,11 @@
 import React from 'react';
-import SnowboardGame from './games/SnowboardGame'; // Import the SnowboardGame component
+import SnowflakeCatcher from './games/SnowflakeCatcher'; // Adjust the path if necessary
 
 function App() {
   return (
-    <div className="App">
-      <SnowboardGame /> {/* Render the SnowboardGame component */}
+    <div>
+      <h1>Snowflake Catcher Game</h1>
+      <SnowflakeCatcher />
     </div>
   );
 }
