@@ -1,0 +1,65 @@
+/* Game area styling */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100vh;
+    background: linear-gradient(to bottom, #88ccee, #004488);
+    perspective: 1000px; /* Enhanced perspective for 3D effect */
+  }
+  
+  .score {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  /* Icy path with 3D style */
+  .path {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    background: linear-gradient(to bottom, #d0eaff, #a8d4f0);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    transform-style: preserve-3d;
+    transform: rotateX(55deg);
+    overflow: hidden;
+  }
+  
+  /* Penguin styling with sliding animation */
+  .penguin {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    background: radial-gradient(circle at 50% 50%, #fff, #bbb);
+    border-radius: 50%;
+    transition: transform 0.4s ease; /* Smooth sliding animation */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Fish with a subtle glow */
+  .fish {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: radial-gradient(circle at 50% 50%, #ffd700, #ff8c00);
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+  }
+  
+  /* Obstacle with shadow for 3D effect */
+  .obstacle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: radial-gradient(circle at 50% 50%, #888, #333);
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+  }
+  
